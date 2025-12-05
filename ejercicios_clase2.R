@@ -1,44 +1,54 @@
-### Ejercicios normales ###
-# Trate de entender que hace cada linea
-# Antes de ejecutar cada linea trate de predecir lo que verá al ejecutarla
-# Añada notas después de cada linea, las notas comienzan con el símbolo #
-# Para ejecutar una linea en la cual está el cursor, apriete "control + enter"
-# Si encuentra un error al ejecutar una linea trate de entender cual es el error
+# EJERCICIOS BASICOS CLASE 2 #
 
-3^2
+# Trate de entender qué hace cada línea.
+# Antes de ejecutar cada línea, trate de predecir lo que verá al ejecutarla.
+# Añada notas después de cada línea; las notas comienzan con el símbolo #
+# Para ejecutar una línea en la cual está el cursor, apriete "Ctrl + Enter"
+# Si encuentra un error al ejecutar una línea, trate de entender cuál es el error.
 
-1+2^2
 
-(1+2)^2
+### Seccion 2 ###
+## Comandos básicos
 
-3^3
+3 ^ 2
 
-9^0.5
+1 + 2 ^ 2
+
+(1 + 2) ^ 2
+
+3 ^ 3
+
+9 ^ 0.5
 
 sqrt(9)
 
-9^0.5 == sqrt(9)
+9 ^ 0.5 == sqrt(9)
 
 1:5
 
 -5:5
 
-
 "banana"
 
-"banana"+5
+"banana" + 5
 
 banana
 
-banana <- 5
+banana <- 5 # asuma que una banana cuesta 5 pesos
 
 banana
 
-banana+5
+manzana <- 5 # asuma que una manzana cuesta 5 pesos
+
+banana + manzana
 
 1:100
 
+
+## Seleccón básica
 my_vector <- 2:22
+
+length(my_vector)
 
 my_vector
 
@@ -62,60 +72,92 @@ my_vector
 
 my_vector[3]
 
-my_vector[3]+1
+my_vector[3] + 1
+
+# Ejercicio: defina un vector del 6 al 3 cómo my_vector
+
+# Ejercicio: escriba un comando que seleccione el tercer valor de my_vector
+
+# Ejercicio: escriba un comando que seleccione todos los valores de my_vector menos el primero
 
 
-### Experimento ###
+
+### Seccion 2 ###
+## Errores
 
 # Elimine todos los objetos que haya definido
-# puede realizar esto en Rstudio con el icono de la escoba en la parte superior derecha 
+# Puede realizar esto en RStudio con el ícono de la escoba en la parte superior derecha
+
+# tomese un minuto para entender el siguiente comando, lo volvera a ejecutar en breve
+treatment <- c("vitamin","vitamin","placebo","placebo","placebo","vitamin","placebo","vitamin")
+
+
+# Existen varios tipos de errores
+# Algunos errores no se pueden ejecutar
+
+"banana" + 5 # error en tiempo de ejecución: no se puede sumar texto y número
+
+# Otros errores se ejecutan pero realizan una acción no deseada
+
+treatment == "vitamin" # comparación
+
+treatment = "vitamin" # esto reasigna treatment (ya no es vector), además NO compara
+
+treatment             # O_o! Que pasó con nuestro vector? Ahora tiene un solo valor?
+
+# Corrija el error pasado, redefina "treatment" como un vector.
+# Vea cómo lo hizo varias líneas atrás.
+
+# Si corrigió el error, debe obtener;
+# "vitamin" "vitamin" "placebo" "placebo" "placebo" "vitamin" "placebo" "vitamin"
+treatment  
+
+# No avance hasta corregir el error!
+
+
+
+### Seccion 2 ###
+## Seleccion compleja 1
 
 subject_id <- 1:8
 
-treatment <- c("vitamin","vitamin","placebo","placebo","placebo","vitamin","placebo","vitamin")
-
-response <- c(8,7,3,2,4,6,1,7)
-
-length(response)
-
 treatment == "vitamin"
 
-treatment = "vitamin" # Este es un error
+subject_id[treatment == "vitamin"]   # Esto es complicado, tómese su tiempo
 
-treatment # O_o!
 
-# corrija el error pasado, redefina "treatment" como un vector
-# vea como lo hizo varias lineas atrás
 
-treatment # si corrigió el error, debe obtener "vitamin","vitamin","placebo","placebo","placebo","vitamin"
+fatigue <- c(8,7,3,2,4,6,1,7)
 
-# no avance hasta corregir el error!
+fatigue >= 5
 
-treatment == "vitamin"
+# Ejercicio: seleccione los valores de fatigue cuyo tratamiento sea "vitamina"
 
-subject_id[treatment == "vitamin"] # esto es complicado, tomese su tiempo
 
-response >= 5
 
-response[treatment == "vitamin"]
+## Primeros gráficos
+effect_vitamin <- fatigue[treatment == "vitamin"]
 
-effect_vitamin <- response[treatment == "vitamin"]
+fatigue[treatment == "placebo"]
 
-response[treatment == "placebo"]
+effect_placebo <- fatigue[treatment == "placebo"]
 
-effect_placebo <- response[treatment == "placebo"]
+?boxplot
 
-boxplot(effect_vitamin,effect_placebo) # si obtiene algo así, apresurese a publicar
+boxplot(effect_vitamin, effect_placebo)   # Si obtiene algo así, apresúrese a publicar
+
+boxplot(effect_vitamin, effect_placebo, names = c("vitamin","placebo"))
 
 sex <- c("male","female","male","male","male","female","female","female")
 
-# seleccione los valores de "response" cuyo valor de "sex" sea "male"
+# Ejercicio: seleccione los valores de "fatigue" cuyo valor de "sex" sea "male"
 
-
-# produzca un diagrama de caja (boxplot) de los valores de "response"
-# compare "male" y "female"
+# Produzca un diagrama de caja (boxplot) de los valores de "fatigue"
+# Compare "male" y "female"
   
 
+
+## subselección compleja 2
 "ana" == c("luisa","ana","fernanda")
 
 "ana" %in% c("luisa","ana","fernanda")
@@ -143,35 +185,46 @@ subject_id2 <- c(1:3, 12:6)
   2 +
   2
 
-# en ocasiones separar un comando hace que sea más fácil leerlo
-my_table1 <- data.frame(
+## Tablas
+
+# podemos usar varios vectores para construir una tabla
+subject_id
+
+treatment
+
+fatigue
+
+sex
+
+
+mi_tabla <- data.frame(
   subject_id = subject_id,
   treatment = treatment,
-  response = response,
+  fatigue = fatigue,
   sex = sex)
 
-my_table1
+mi_tabla
 
-my_table1[1,1]
+mi_tabla[1,1]
 
-my_table1[1,2]
+mi_tabla[1,2]
 
-my_table1[1,]
+mi_tabla[1,]
 
-my_table1[,1]
+mi_tabla[,1]
 
-my_table[,2]
+mi_tabla[,2]
 
-# seleccione la tercer columna de "my_table1"
+# seleccione la tercer columna de "mi_tabla"
 
 
-my_table1[,2] == "placebo"
+mi_tabla[,2] == "placebo"
 
-is_placebo <- my_table1[,2] == "placebo"
+is_placebo <- mi_tabla[,2] == "placebo"
 
 is_placebo
 
-my_table1[is_placebo,1]
+mi_tabla[is_placebo,1]
 
 TRUE
 
@@ -179,7 +232,7 @@ TRUE
 
 !is_placebo
 
-my_table1[!is_placebo,1]
+mi_tabla[!is_placebo,1]
 
 # obtenga el sexo de todos los individuos que tienen tratamiento con vitaminas
 
