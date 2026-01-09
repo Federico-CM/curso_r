@@ -1,15 +1,16 @@
 ### Ejercicios avanzados ###
-# Solo puede preguntar sobre los ejercicios avanzados si ya ha completado los ejercicios básicos
+# Prerrequisito: haber completado básicos
 # La respuesta de los ejercicios avanzados está en todos los ejercicios básicos
 
 
-# si en su sesión se han definido objetos (vectores, tablas... etc) eliminelos
+# borre el entorno antes de empezar 
+# tip: use rm(list = ls())
 
 
 # calcule 2.25 al cubo
 
 
-# calcule la raiz cuadrada de 10
+# calcule la raíz cuadrada de 10
 
 
 # defina "calificaciones" como la secuencia de -100 a 100
@@ -18,7 +19,7 @@
 # seleccione todos los elementos de "calificaciones" menos los primeros 135
 
 
-# seleccione el 5o elemento de calificaiones (debe ser -96)
+# seleccione el 5o elemento de calificaciones (debe ser -96)
 
 
 # redefina "calificaciones" multiplicando todos los elementos por 1.4
