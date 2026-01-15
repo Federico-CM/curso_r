@@ -1,4 +1,9 @@
-### Ejercicios normales ###
+### Clase 3 – Operaciones básicas, lógica y manipulación de data frames ###
+# Objetivo: practicar funciones básicas (sum, mean, log), muestreo con sample(),
+# operaciones lógicas e indexación booleana, y crear/consultar data frames en R base.
+
+
+### Ejercicios ###
 # Trate de entender que hace cada linea
 # Antes de ejecutar cada linea trate de predecir lo que verá al ejecutarla
 # Añada notas después de cada linea, las notas comienzan con el símbolo #

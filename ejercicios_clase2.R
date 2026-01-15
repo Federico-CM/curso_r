@@ -1,5 +1,9 @@
-# EJERCICIOS BASICOS CLASE 2 #
+### Clase 2 – Vectores, indexación y data frames ###
+# Objetivo: practicar operaciones matemáticas, creación y manipulación
+# de vectores y data frames usando R base.
 
+
+### Ejercicios ###
 # Trate de entender qué hace cada línea.
 # Antes de ejecutar cada línea, trate de predecir lo que verá al ejecutarla.
 # Añada notas después de cada línea; las notas comienzan con el símbolo #
@@ -216,7 +220,6 @@ mi_tabla[,1]
 mi_tabla[,2]
 
 # seleccione la tercer columna de "mi_tabla"
-
 
 mi_tabla[,2] == "placebo"
 

@@ -1,4 +1,9 @@
-### Ejercicios avanzados ###
+### Clase 2 – Vectores, indexación y data frames ###
+# Objetivo: practicar operaciones matemáticas, creación y manipulación
+# de vectores y data frames usando R base.
+
+
+### Ejercicios ###
 # Prerrequisito: haber completado básicos
 # La respuesta de los ejercicios avanzados está en todos los ejercicios básicos
 

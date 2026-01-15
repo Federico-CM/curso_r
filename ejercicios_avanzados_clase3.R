@@ -1,5 +1,5 @@
 ### Ejercicios avanzados ###
-# Solo puede preguntar sobre los ejercicios avanzados si ya ha completado los ejercicios básicos
+# Prerrequisito: haber completado básicos
 # La respuesta de los ejercicios avanzados está en todos los ejercicios básicos
 
 letters

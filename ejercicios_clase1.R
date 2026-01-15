@@ -1,4 +1,6 @@
-# EJERCICIOS BASICOS CLASE 1 #
+### Clase 2 – Introduccion a R ###
+# Objetivo: familiarizarse con operaciones matemáticas, creación y manipulación
+# de vectores.
 
 # Trate de entender qué hace cada línea.
 # Antes de ejecutar cada línea, trate de predecir lo que verá al ejecutarla.
